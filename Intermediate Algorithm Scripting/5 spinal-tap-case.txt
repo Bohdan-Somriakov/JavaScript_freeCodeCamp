@@ -1,0 +1,9 @@
+function spinalCase(str) {
+  let array = str.split(/\s|_|(?=[A-Z])/)
+  let joinArr = array.join('-')
+  let lowerCase = joinArr.toLowerCase()
+  console.log(lowerCase)
+  return lowerCase;
+}
+
+spinalCase('AllThe-small Things');

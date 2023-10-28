@@ -1,0 +1,2 @@
+// Only change code below this line
+const myArray = [["This is first array ", 5 ] , "This is second array ", 8];

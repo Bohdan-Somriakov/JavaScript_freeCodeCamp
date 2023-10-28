@@ -1,0 +1,19 @@
+function translatePigLatin(str) {
+  let regex = /[aeiuo]/;
+  let pigLatin = '';
+  if (str[0].match(regex)){
+    pigLatin = str + 'way';
+  } else if (str.match(regex) === null){
+    pigLatin = str + 'ay';
+  } else {
+    let vowelIndex = str.indexOf(str.match(regex))
+    pigLatin = str.substr(vowelIndex) + str.substr(0 , vowelIndex) + 'ay';
+  }
+  return pigLatin;
+}
+
+console.log(
+  
+  translatePigLatin("schwartz")
+
+);

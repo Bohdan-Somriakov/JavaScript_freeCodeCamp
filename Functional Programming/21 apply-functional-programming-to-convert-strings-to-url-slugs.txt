@@ -1,0 +1,15 @@
+// Only change code below this line
+function urlSlug(title) {
+let lowerCase = title.toLowerCase()
+let splitArr = lowerCase.split(' ')
+for (let i = 0; i < splitArr.length; i++){
+  if (splitArr[i] === ''){
+    splitArr.splice(i , 1)
+  }
+}
+let joinArr = splitArr.join('-')
+return joinArr
+}
+// Only change code above this line
+urlSlug(" Winter Is  Coming");
+console.log(urlSlug(" Winter Is  Coming"))

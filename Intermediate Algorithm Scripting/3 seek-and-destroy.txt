@@ -1,0 +1,14 @@
+function destroyer(arr) {
+  let args = Array.from(arguments);
+  let targets = args.slice(1);
+  let result = []
+  for (let num of arr){
+    if (targets.indexOf(num) === -1){
+      result.push(num)
+    }
+  }
+  console.log(result)
+  return result;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);

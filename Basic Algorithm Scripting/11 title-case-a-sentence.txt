@@ -1,0 +1,12 @@
+function titleCase(str) {
+ let lowerCase = str.toLowerCase();
+ let words = lowerCase.split(' ')
+ for (let i = 0; i < words.length; i++){
+   words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1) 
+ }
+ let joinWords = words.join(' ')
+ console.log(joinWords)
+ return joinWords
+}
+
+titleCase("I'm a little tea pot");

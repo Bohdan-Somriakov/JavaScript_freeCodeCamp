@@ -1,0 +1,26 @@
+function computeSCM(arr1 , arr2){
+  let a = Math.min(arr1 , arr2);
+  let b = Math.max(arr1 , arr2);
+  for (let m = b; m <= a * b; m = m + b){
+    if (m % a === 0){
+      return m;
+    }
+  }
+}
+
+
+function smallestCommons(arr) {
+  let x = Math.min(...arr);
+  let y = Math.max(...arr);
+  let scm = 1;
+  for (let i = x; i <= y; i++){
+    scm = computeSCM(scm , i)
+  }
+  return scm;
+}
+
+console.log(
+  
+  smallestCommons([1,5])
+
+)

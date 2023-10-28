@@ -1,0 +1,16 @@
+function convertHTML(str) {
+  const htmlEntities = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&apos;"
+  };
+  return str.replace(/([&<>"'])/g, matchItems => htmlEntities[matchItems]);
+}
+
+console.log(
+  
+  convertHTML("Hamburgers < Pizza < Tacos")
+
+)

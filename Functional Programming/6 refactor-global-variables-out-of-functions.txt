@@ -1,0 +1,29 @@
+// the global variable
+var bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+//function add a book to the array
+function add( bookList, bookName ) {
+	//make a copy of the argument's array
+	let bookListCopy = bookList.slice(0);
+	//add the bookName to the new array
+	bookListCopy.push( bookName );
+	
+	//return the new modified array
+	return bookListCopy;
+};
+
+//function remove a book from the array
+function remove( bookList, bookName ) {
+	//make a copy of the argument's array
+	let bookListCopy = bookList.slice(0);
+	
+	if( bookListCopy.indexOf( bookName ) >= 0 ) {
+		//delet the book
+		bookListCopy.splice( bookListCopy.indexOf( bookName ), 1 );
+		
+		//return the new modified array
+		return bookListCopy;
+    }
+};
+
+

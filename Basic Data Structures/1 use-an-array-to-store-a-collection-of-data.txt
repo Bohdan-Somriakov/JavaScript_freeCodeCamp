@@ -1,0 +1,2 @@
+let yourArray =[true , 1 , 5 , 'Hello' , 'Howdy']; // Change this line
+console.log(yourArray)
